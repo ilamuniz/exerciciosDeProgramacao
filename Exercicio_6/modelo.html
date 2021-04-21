@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo Adivinhe o Número</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        <h1>Jogo Adivinhe o Número</h1>
+    </header>
+    <section>
+        <p>Selecionamos um número aleatório entre 1 e 100. Tente adivinhar em dez tentativas ou menos e lhe diremos se seu palpite é alto ou baixo.</p>
+        <div class="form">
+            <label for="campoPalpite">Digite seu palpite</label>
+            <input id="campoPalpite" class="campoPalpite" type="text">
+            <input class="enviarPalpite" type="submit" value="Enviar palpite" onclick="conferirPalpite()">
+        </div>
+        <div class="resultado">
+            <p class="palpites"></p>
+            <p class="ultimoResultado"></p>
+            <p class="alto_ou_baixo"></p>
+        </div>
+    </section>
+    <footer>
+        <p>&copy;Ila Muniz</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
