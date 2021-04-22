@@ -60,5 +60,25 @@ function concluir() {
         resultado.innerHTML += `<p>O menor valor cadastrado foi ${menor}.</p>`
         resultado.innerHTML += `<p>A soma de todos os valores é ${soma}.</p>`
         resultado.innerHTML += `<p>A média dos valores cadastrados é ${media}.</p>`
+        fimDaAnalise(); // O botão de Reiniciar ainda não aparece
     }
+}
+
+function fimDaAnalise() {
+    dados.disabled = true;
+    lista.disabled = true;
+
+    botaoReiniciar = document.createElement('button');
+    botaoReiniciar.textContent = "Reiniciar";
+    document.body.appendChild(botaoReiniciar);
+    botaoReiniciar.addEventListener('click', reiniciar());
+}
+
+function reiniciar() {
+    botaoReiniciar.parentNode.removeChild(botaoReiniciar);
+
+    dados.disabled = false;
+    lista.disabled = false;
+    dados.value = "";
+    dados.focus();
 }
